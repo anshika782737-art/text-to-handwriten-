@@ -1,0 +1,258 @@
+:root {
+    --themeColor: #ff0000;
+    --tof-tool-page-default-padding: 60px;
+    --site-maxed-width: 1500px;
+    --tof-related-review-title-color: #fff;
+    --tof-related-featured-bg: #f9f9f9;
+    --tof-related-review-title-bg: #666;
+    --tof-about-tool-content-border: #eee;
+    --tof-tool-content-heading-color: #220a01;
+    --tof-tool-content-para-color: #231f20;
+    --tof-tool-content-notice-border: #a2f7a2;
+    --tof-tool-content-notice-bg: #c7fac7;
+    --tof-tool-content-alert-border: #fdc7b3;
+    --tof-tool-content-alert-bg: #fde3d9;
+    --tof-tool-content-about-info: #f5f5f5;
+    --tof-tool-content-code-bg: #fff;
+    --tof-tool-content-code-color: #444;
+    --tof-tool-content-code-border: #ccc;
+    --tof-tool-content-faq-border: #ddd;
+}
+
+[data-theme="dark"] {
+    --tof-related-review-title-color: #ddd;
+    --tof-related-featured-bg: #1a1c21;
+    --tof-related-review-title-bg: #1a1c21;
+    --tof-about-tool-content-border: #333;
+    --tof-tool-content-heading-color: #eee;
+    --tof-tool-content-para-color: #ccc;
+    --tof-tool-content-notice-border: #1a1c21;
+    --tof-tool-content-notice-bg: #1a1c21;
+    --tof-tool-content-alert-border: #211a1a;
+    --tof-tool-content-alert-bg: #211a1a;
+    --tof-tool-content-about-info: #1a1c21;
+    --tof-tool-content-code-bg: #21242c;
+    --tof-tool-content-code-color: #ddd;
+    --tof-tool-content-code-border: #31353e;
+    --tof-tool-content-faq-border: #444;
+}
+.tof-related-contributor {
+    background: var(--tof-related-featured-bg);
+    margin: 0 0 35px 0;
+    padding: 5px 0;
+}
+.tof-review-highlight {
+    color: var(--tof-related-review-title-color);
+    background: var(--tof-related-review-title-bg);
+    padding: 6px 20px;
+    border-radius: 5px;
+    line-height: 0;
+    font-size: 24px;
+    margin-left: 7px;
+    position: relative;
+    font-weight: 400 !important;
+}
+.tof-review-highlight:after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var(--themeMode);
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.tof-review-highlight:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var(--themeMode);
+    position: absolute;
+    top: 50%;
+    left: -8px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+.tof-review-slider-head {
+    font-size: 24px;
+    margin: 45px 0 0 0;
+    text-align: center;
+    font-weight: 600;
+    font-family: Inter, sans-serif;
+    color: #444;
+}
+.tof-about-tool-wrapper {
+    max-width: var(--site-maxed-width);
+    margin: 0 auto 35px auto;
+    padding: 0 var(--tof-tool-page-default-padding);
+    box-sizing: border-box;
+}
+.tof-about-tool-content {
+    box-shadow: 0 0 2px 1px var(--tof-about-tool-content-border);
+    padding: 15px 30px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.tof-about-tool-content {
+    font-family: Inter, sans-serif;
+}
+.tof-about-tool-content h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+    color: var(--tof-tool-content-heading-color);
+    line-height: 40px;
+}
+.tof-about-tool-content h2 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0 0 0;
+    color: var(--tof-tool-content-heading-color);
+    line-height: 30px;
+}
+.tof-about-tool-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0 0 0;
+    color: var(--tof-tool-content-heading-color);
+    line-height: 30px;
+}
+.tof-about-tool-content p {
+    font-size: 17px;
+    color: var(--tof-tool-content-para-color);
+    line-height: 31px;
+}
+.userinfo {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: var(--tof-tool-content-para-color);
+    line-height: 25px;
+}
+.userinfo.notice {
+    border: 1px solid var(--tof-tool-content-notice-border);
+    background: var(--tof-tool-content-notice-bg);
+}
+.userinfo.alert {
+    border: 1px solid var(--tof-tool-content-alert-border);
+    background: var(--tof-tool-content-alert-bg);
+}
+.contentinfo {
+    color: var(--tof-tool-content-para-color);
+    padding: 20px;
+    background: var(--tof-tool-content-about-info);
+    border-radius: 5px;
+    line-height: 28px;
+}
+.contentinfo li {
+    margin: 10px 0;
+}
+.contentinfo.borderLeft {
+    border-left: 3px solid var(--themeColor);
+}
+.tof-about-tool-content b {
+    font-weight: 600;
+}
+.tof-about-tool-content li {
+    font-size: 17px;
+    color: var(--tof-tool-content-para-color);
+    line-height: 31px;
+    margin: 15px 0;
+}
+.tof-about-tool-content code {
+    background: var(--tof-tool-content-code-bg);
+    border: 1px dotted var(--tof-tool-content-code-border);
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    color: var(--tof-tool-content-code-color);
+}
+.default-color {
+    color: var(--themeColor);
+}
+.faq-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--tof-tool-content-para-color);
+}
+.faq-heading:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--tof-tool-content-faq-border);
+    margin: 10px 0 0 0;
+}
+.faq-wrapper {
+    margin: 20px 0;
+}
+.tool-faq {
+    margin: 20px 0;
+}
+.faq-question {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: var(--tof-tool-content-heading-color);
+}
+.faq-answer {
+    font-size: 16px;
+    color: var(--tof-tool-content-para-color);
+    line-height: 27px;
+    margin-top: 10px;
+}
+.tof-about-tool-content a {
+    text-decoration: none;
+    color: var(--themeColor);
+    cursor: pointer;
+}
+
+.tof-table{
+	overflow-x: auto;
+	margin: 30px 0;
+}
+
+.tof-table table{
+  width: 100%;
+  min-width: 750px;
+  border-radius: 4px;
+  border-collapse: collapse;
+  line-height: 28px;
+}
+
+.tof-table table td,
+.tof-table table th {
+  border: 1px solid var(--tof-default-bg-active);
+  padding: 15px;
+  color: var(--tof-black-color-3);
+}
+
+.tof-table table th {
+  text-align: left;
+  background-color: var(--tof-default-bg-hover);
+  padding: 25px 15px;
+  color: var(--tof-black-color-2);
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+    :root {
+        --tof-tool-page-default-padding: 20px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .tof-about-tool-content-list-wrapper {
+        display: none;
+    }
+    .tof-about-tool-content {
+        box-shadow: none;
+        padding: 15px 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+    }
+}

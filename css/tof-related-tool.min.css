@@ -1,0 +1,200 @@
+:root {
+    --themeColor: #ff0000;
+    --themeHoverColor: #ff0000;
+    --tof-explore-default-padding: 60px;
+    --tof-related-tool-heading: #222;
+    --tof-related-tool-highlight: #FF8458;
+    --tof-related-tool-card-des: #6F5D59;
+    --tof-related-tool-card-border: #eee;
+    --tof-related-tool-card-shadow: #f5f5f5;
+    --tof-related-tool-card-title: #2A1D19
+}
+
+[data-theme=dark] {
+    --tof-related-tool-heading: #eee;
+    --tof-related-tool-highlight: #FF8458;
+    --tof-related-tool-card-des: #999;
+    --tof-related-tool-card-border: #252525;
+    --tof-related-tool-card-shadow: #090909;
+    --tof-related-tool-card-title: #eee
+}
+
+.tof-related-section {
+    max-width: 1150px;
+    margin: 35px auto 0 auto;
+    padding: 0 var(--tof-explore-default-padding)
+}
+
+.tof-related-head {
+    font-size: 25px;
+    font-weight: 500;
+    font-family: Inter,sans-serif;
+    color: var(--tof-related-tool-heading);
+    position: relative
+}
+
+.tof-related-head .tof-highlight {
+    color: var(--tof-related-tool-highlight);
+    font-weight: 600;
+    margin: 0 7px 0 0
+}
+
+.tof-related-head .tof-highlight img {
+    position: absolute;
+    left: 0;
+    top: 33px;
+    width: 240px;
+    height: 19px
+}
+
+.tof-related-card-wrapper {
+    margin: 45px 0 0 0;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap
+}
+
+.tof-related-card-wrapper a {
+    text-decoration: none
+}
+
+.tof-suggest-related-tool {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center
+}
+
+.tof-suggest-card-icon {
+    margin: 0 0 10px 0
+}
+
+.tof-suggest-card-icon svg {
+    fill: var(--themeColor)
+}
+
+.tof-suggest-card-des {
+    font-size: 15px;
+    line-height: 23px;
+    color: var(--tof-related-tool-card-des)
+}
+
+.tof-suggest-card-button {
+    margin: 15px 0 0 0
+}
+
+.tof-suggest-card-button button {
+    font-family: Inter,sans-serif;
+    padding: 7px 20px;
+    background: var(--themeColor);
+    color: #fff;
+    font-weight: 500;
+    border-radius: 25px;
+    border: 1px solid var(--themeColor);
+    cursor: pointer
+}
+
+.tof-related-card {
+    width: 30%;
+    height: 300px;
+    margin: 0 15px 30px 15px;
+    border: 1px solid var(--tof-related-tool-card-border);
+    border-radius: 10px;
+    padding: 25px;
+    box-sizing: border-box;
+    font-family: Inter,sans-serif;
+    transition: .3s;
+    user-select: none;
+    cursor: pointer
+}
+
+.tof-related-card:hover {
+    box-shadow: 0 0 50px 1px var(--tof-related-tool-card-shadow)
+}
+
+.tof-related-image {
+    width: 60px;
+    height: 60px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    overflow: hidden
+}
+
+.tof-related-image img {
+    border-radius: 50%
+}
+
+.tof-related-content {
+    max-height: 150px;
+    overflow: hidden;
+    font-family: Inter,sans-serif
+}
+
+.tof-related-card-title {
+    font-size: 19px;
+    margin: 17px 0 0 0;
+    color: var(--tof-related-tool-card-title);
+    font-weight: 500;
+    line-height: 30px
+}
+
+.tof-related-card-des {
+    margin: 5px 0 0 0;
+    font-size: 15px;
+    line-height: 23px;
+    color: var(--tof-related-tool-card-des)
+}
+
+.tof-related-card-button {
+    margin: 10px 0 0 0
+}
+
+.tof-related-card-button a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--themeColor);
+    font-size: 15px;
+    font-weight: 500
+}
+
+.tof-related-card-button svg {
+    margin-top: 1.5px;
+    fill: var(--themeColor)
+}
+
+.tof-related-card-button:hover a {
+    color: var(--themeHoverColor)
+}
+
+.tof-related-card-button:hover svg {
+    fill: var(--themeHoverColor)
+}
+
+@media only screen and (max-width: 1150px) {
+    .tof-related-card {
+        width:calc(50% - 30px)
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    :root {
+        --tof-explore-default-padding:20px
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .tof-related-card-wrapper {
+        flex-direction:column
+    }
+
+    .tof-related-card {
+        width: 100%;
+        height: auto;
+        margin: 0 0 30px 0
+    }
+
+    .tof-related-content {
+        max-height: 100%
+    }
+}

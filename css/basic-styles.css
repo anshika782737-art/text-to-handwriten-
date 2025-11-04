@@ -1,0 +1,334 @@
+/*
+	Basic Styles
+	ToolsOverflow
+*/
+
+:root{
+	--tof-black-color-1: #000;
+	--tof-black-color-2: #222;
+	--tof-black-color-3: #333;
+	--tof-black-color-4: #444;
+	--tof-black-color-5: #555;
+	--tof-black-color-9: #999;
+	--tof-black-color-10: #aaa;
+	--tof-black-color-11: #bbb;
+	--tof-black-color-12: #ccc;
+	--tof-black-color-13: #ddd;
+	--tof-black-color-14: #eee;
+
+	--tof-red-color-3: #c00;
+
+	--tof-yellow-color-5: #E4AB23;
+	--tof-yellow-color-9: #FBEFD0;
+
+	--tof-default-bg: #F6F6FB;
+	--tof-default-bg-hover: #F2F2FD;
+	--tof-default-bg-active: #E0E0FC;
+
+	--tof-input-bg: #fff;
+	--tof-tool-input-outline: #F4C6B5;
+
+	/* Skeleton Loader */
+	--back-skeleton: #fff;
+	--front-skeleton: #f9f9f9;
+
+	--tof-range-handler-active: rgba(255,85,0, .15);
+}
+
+[data-theme="dark"]{
+	--tof-black-color-1: #fff;
+	--tof-black-color-2: #ddd;
+	--tof-black-color-3: #ccc;
+	--tof-black-color-4: #bbb;
+	--tof-black-color-5: #aaa;
+	--tof-black-color-9: #999;
+	--tof-black-color-10: #888;
+	--tof-black-color-11: #777;
+	--tof-black-color-12: #666;
+	--tof-black-color-13: #272B35;
+	--tof-black-color-14: #444;
+
+	--tof-red-color-3: #B78D8D;
+
+	--tof-yellow-color-5: #E4AB23;
+	--tof-yellow-color-9: #21211A;
+
+	--tof-default-bg: #1A1C21;
+	--tof-default-bg-hover: #25282F;
+	--tof-default-bg-active: #373B45;
+
+	--tof-input-bg: #1A1C21;
+	--tof-tool-input-outline: #343841;
+
+	/* Skeleton Loader */
+	--back-skeleton: #151515;
+	--front-skeleton: #111;
+
+	--tof-range-handler-active: rgba(255,85,0, .1);
+}
+
+
+textarea[data-role="normal"]{
+	width: 100%;
+	min-height: 250px;
+	border-radius: 3px;
+	border: 1px solid var(--tof-black-color-13);
+	background: var(--tof-input-bg);
+	padding: 15px;
+	color: var(--tof-black-color-3);
+	font-size: 16px;
+	resize: none;
+	line-height: 26px;
+	outline: 2px solid transparent;
+	transition: outline .1s;
+}
+
+textarea::-webkit-scrollbar {
+  width: 4px;
+}
+
+input[data-role="normal"]{
+	width: 100%;
+	height: 45px;
+	border-radius: 3px;
+	border: 1px solid var(--tof-black-color-13);
+	background: var(--tof-input-bg);
+	padding: 15px;
+	color: var(--tof-black-color-3);
+	font-size: 16px;
+	outline: 2px solid transparent;
+	transition: outline .1s;
+}
+
+textarea[data-role="normal"]:focus, input[data-role="normal"]:focus{
+	outline: 2px solid var(--tof-tool-input-outline);
+	border-color: var(--themeColor);
+}
+
+input[data-role="normal"]:disabled{
+	opacity: .8;
+	background-color: transparent;
+}
+
+
+/* Select */
+select[data-role="normal"]{
+	width: 100%;
+	height: 45px;
+	border: 1px solid var(--tof-black-color-13);
+	padding: 0 10px;
+	border-radius: 4px;
+	font-size: 15px;
+	color: var(--tof-black-color-3);
+	background: var(--tof-input-bg);
+	outline: 2px solid transparent;
+	transition: outline .1s;
+}
+
+
+select[data-role="normal"]:focus{
+	border-color: var(--themeColor);
+	outline: 2px solid var(--tof-tool-input-outline);
+}
+
+.tof-select{
+	position: relative;
+}
+
+.tof-select .arrow{
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+	right: 1px;
+	width: 25px;
+	height: 20px;
+	background-color: var(--tof-input-bg);
+}
+
+.tof-select .arrow:after{
+	content: "\25bc";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) scaleY(0.5);
+    color: var(--tof-black-color-4);
+}
+
+
+/* Button */
+button[data-role="normal"]{
+	height: 45px;
+	background-color: var(--themeColor);
+	border: 1px solid var(--themeColor);
+	color: #fff;
+	font-weight: 500;
+	font-size: 15px;
+	padding: 0 25px;
+	border-radius: 4px;
+	cursor: pointer;
+	user-select: none;
+	transition: background-color .3s;
+}
+
+button[data-role="normal"]:hover{
+	background-color: #F3490B;
+}
+
+button[data-role="normal"]:active{
+	background-color: #F35F29;
+}
+
+button[data-role="normal"].disabled{
+	pointer-events: none;
+	opacity: .7;
+}
+
+select[data-role="normal"]:disabled{
+	opacity: 1;
+}
+
+/* Checkbox */
+input[type="checkbox"]{
+	position: relative;
+	margin: 0 10px 0 0;
+	width: 15px;
+	height: 15px;
+}
+
+input[type="checkbox"]:checked:before{
+	background-color: var(--themeColor);
+	border-color: var(--themeColor);
+}
+
+input[type="checkbox"]:checked:after{
+	border: solid #ffffff;
+	border-width: 0 2px 2px 0;
+}
+
+input[type="checkbox"]:before{
+	content: "";
+	color: #fff;
+	width: 15px;
+	height: 15px;
+	border: 1px solid var(--tof-default-bg-active);
+	border-radius: 2px;
+	background-color: var(--themeMode);
+	display: inline-flex;
+	text-align: center;
+	justify-content: center;
+	position: relative;
+	bottom: 0px;
+}
+
+input[type="checkbox"]:after{
+	content: "";
+	position: absolute;
+	display: block;
+	left: 6px;
+	top: 3px;
+	width: 3px;
+	height: 7px;
+	border: solid transparent;
+	border-width: 0 2px 2px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+input[type="checkbox"] + label{
+	user-select: none;
+	color: var(--tof-black-color-4);
+	font-size: 16px;
+}
+
+
+/* Input Range */
+
+.tof-range{
+	display: flex;
+	align-items: center;
+	color: var(--tof-black-color-2);
+}
+
+.tof-range input[type="range"]{
+	flex: 1;
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	outline: none;
+	border-radius: 15px;
+	height: 10px;
+	background-color: var(--tof-black-color-13);
+}
+
+/* Thumb: webkit */
+.tof-range input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none; 
+  height: 20px;
+  width: 20px;
+  background-color: var(--themeColor);
+  border-radius: 50%;
+  border: none;
+ 	transition: .2s ease-in-out;
+}
+
+/* Thumb: Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  background-color: var(--themeColor);
+  border-radius: 50%;
+  border: none;
+  transition: .2s ease-in-out;
+}
+
+/**
+ * Hover, Active, Focus
+ * Webkit
+ */
+
+.tof-range input[type="range"]::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 10px rgba(255,85,0, .2);
+}
+
+.tof-range input[type="range"]:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 14px var(--tof-range-handler-active);
+}
+/**
+ * Hover, Active, Focus
+ * Firfox
+ */
+
+.tof-range input[type="range"]::-moz-range-thumb:hover {
+  box-shadow: 0 0 0 10px rgba(255,85,0, .2);
+}
+.tof-range input[type="range"]:active::-moz-range-thumb {
+  box-shadow: 0 0 0 14px var(--tof-range-handler-active);
+}
+
+.range-value{
+	width: 40px;
+	text-align: center;
+	padding: 6px 0;
+	font-size: 16px;
+	font-weight: 500;
+	background-color: var(--tof-default-bg-hover);
+	border: 1px solid var(--tof-default-bg-active);
+	border-radius: 5px;
+	margin-left: 10px;
+	color: var(--tof-black-color-5);
+}
+
+
+/* Ad Slots - Fixed Horizontal */
+.site-ads{
+    display: flex;
+    justify-content: center;
+}
+.site-ads.m-top{
+    margin-top: 25px;
+}
+.site-ads.m-bottom{
+    margin-bottom: 25px;
+}

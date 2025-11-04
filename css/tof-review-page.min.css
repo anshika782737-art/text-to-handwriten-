@@ -1,0 +1,275 @@
+:root {
+    --themeColor: #ff0000;
+    --tof-default-padding: 60px;
+    --site-maxed-width: 1500px;
+    --tof-review-card-tool-border: #ddd;
+    --tof-review-slider-border: #E0E0E0;
+    --tof-review-slider-bg: #f9f9f9;
+    --tof-review-slider-focus-shadow: #eee;
+    --tof-review-slider-button: #ddd;
+    --tof-review-slider-username-color: #333;
+    --tof-review-slider-username-rating-color: #333;
+    --tof-review-slider-tool-tab-border: #ddd;
+    --tof-review-slider-tool-tab-bg: #f5f5f5;
+    --tof-review-slider-tool-tab-color: #444;
+    --tof-review-slider-tool-tab-shadow: #eee;
+    --tof-review-slider-rating-bg: #ddd;
+    --tof-review-card-user-review-color: #333;
+    --tof-review-slider-rating-date-color: #555;
+    --tof-slider-mob-default-pos: 0%;
+    --tof-noreview-bg: #FFEFE9;
+    --tof-noreview-border: #F2DDD5
+}
+
+[data-theme=dark] {
+    --tof-review-card-tool-border: #292D37;
+    --tof-review-slider-border: #292D37;
+    --tof-review-slider-bg: #1A1C21;
+    --tof-review-slider-focus-shadow: #090909;
+    --tof-review-slider-button: #666;
+    --tof-review-slider-username-color: #ddd;
+    --tof-review-slider-username-rating-color: #ddd;
+    --tof-review-slider-tool-tab-border: #1F232D;
+    --tof-review-slider-tool-tab-bg: #1F232D;
+    --tof-review-slider-tool-tab-color: #aaa;
+    --tof-review-slider-tool-tab-shadow: #1F232D;
+    --tof-review-slider-rating-bg: #333;
+    --tof-review-card-user-review-color: #aaa;
+    --tof-review-slider-rating-date-color: #888;
+    --tof-noreview-bg: #2F2B25;
+    --tof-noreview-border: #39352E
+}
+
+.tof-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: var(--site-maxed-width);
+    margin: 25px auto;
+    padding: 25px 0
+}
+
+.tof-slider-wrapper {
+    display: flex;
+    transition: transform 1s ease 0s;
+    transform: translateX(-25%)
+}
+
+.tof-slide {
+    min-width: calc(50% - 32px);
+    height: auto;
+    margin: 0 16px;
+    border: 1px solid var(--tof-review-slider-border);
+    opacity: .4;
+    transition: 1s;
+    background: var(--tof-review-slider-bg);
+    border-radius: 10px;
+    user-select: none
+}
+
+#tof-slide-focus {
+    box-shadow: 0 4px 6px 0 var(--tof-review-slider-focus-shadow);
+    opacity: 1;
+    user-select: auto
+}
+
+.tof-slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: 0 0;
+    fill: var(--tof-review-slider-button);
+    cursor: pointer
+}
+
+.tof-slider-button-hide {
+    opacity: 0
+}
+
+.tof-slider-back {
+    left: 0;
+    padding: 0 0 0 15px
+}
+
+.tof-slider-next {
+    right: 0;
+    padding: 0 15px 0 0
+}
+
+.tof-review-card-wrapper {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 15px 25px 25px 15px;
+    font-family: Inter,sans-serif
+}
+
+.tof-review-card-noreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 35px 40px 35px;
+    line-height: 25px
+}
+
+.tof-noreview-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px 0 0 0;
+    color: var(--tof-review-slider-username-color);
+    text-align: center
+}
+
+.tof-noreview-des {
+    margin: 5px 0 0 0;
+    max-width: 300px;
+    text-align: center;
+    color: var(--tof-review-card-user-review-color)
+}
+
+.tof-noreview-button {
+    padding: 7px 20px;
+    background: var(--tof-noreview-bg);
+    border: 1px solid var(--tof-noreview-border);
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 15px;
+    color: var(--themeColor);
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer
+}
+
+.tof-review-card-data {
+    display: flex;
+    align-items: center
+}
+
+.tof-review-card-user-detail {
+    width: 200px;
+    text-align: center;
+    margin: 0 10px 0 0
+}
+
+.tof-review-card-username {
+    max-width: 80%;
+    margin: 10px auto 0 auto;
+    color: var(--tof-review-slider-username-color);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.tof-review-card-rating {
+    color: var(--tof-review-slider-username-rating-color);
+    margin: 11px 0 0 0
+}
+
+.tof-review-card-content:before {
+    content: "";
+    display: block;
+    margin: 0 0 15px 0;
+    width: 28px;
+    height: 26px;
+    background: url(../images/quote.png)
+}
+
+.tof-review-card-content {
+    flex: 1;
+    position: relative;
+    margin: 15px 0 0 0;
+    font-size: 16px;
+    line-height: 27px
+}
+
+.tof-review-card-rating {
+    display: flex;
+    justify-content: center
+}
+
+.tof-review-rating-wrapper {
+    box-sizing: border-box;
+    display: flex
+}
+
+.tof-review-rating {
+    position: relative;
+    display: inline-block;
+    color: var(--tof-review-slider-rating-bg)
+}
+
+.tof-review-rating .filled-stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    color: var(--themeColor)
+}
+
+.tof-review-rating .filled-stars:before,.tof-review-rating .grey-stars:before {
+    content: "\2605\2605\2605\2605\2605";
+    font-size: 24px;
+    letter-spacing: 4px;
+    line-height: 15px;
+    box-sizing: border-box
+}
+
+.tof-review-card-user-review {
+    min-height: 150px;
+    max-height: 180px;
+    overflow: auto;
+    color: var(--tof-review-card-user-review-color)
+}
+
+.tof-review-card-user-review-time {
+    margin-top: 10px;
+    display: block;
+    font-size: 15px;
+    color: var(--tof-review-slider-rating-date-color)
+}
+
+.tof-review-card-user-review::-webkit-scrollbar {
+    width: 4px
+}
+
+@media only screen and (max-width: 1000px) {
+    .tof-slide {
+        min-width:calc(100% - 34px)
+    }
+
+    .tof-slider-wrapper {
+        transform: translateX(var(--tof-slider-mob-default-pos))
+    }
+
+    .tof-review-card-user-review {
+        max-height: 250px
+    }
+
+    .tof-slider-button {
+        height: 100%;
+        opacity: 0
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .tof-review-card-data {
+        flex-direction:column;
+        align-items: center
+    }
+
+    .tof-review-card-content {
+        padding: 0 15px
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .tof-review-card-tool {
+        line-height:25px;
+        border: 1px solid transparent;
+        background: 0 0
+    }
+
+    .tof-review-card-tool:hover {
+        box-shadow: 0 0 4px 1px transparent
+    }
+}
